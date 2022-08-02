@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+<h1>Регистрация</h1>
+<form action="/api/v1/registration" method="post">
+    <div class="form-group col-xs-3">
+        <label for="exampleInputEmail1">Имя</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Имя" name="firstName">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail2">Фамилия</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Фамилия" name="lastName">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail3">Почта</label>
+        <input type="number" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="Почта" name="email">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail4">Пароль</label>
+        <input type="text" class="form-control" id="exampleInputEmail4" aria-describedby="emailHelp" placeholder="Пароль" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+</form>
+</body>
+</html>

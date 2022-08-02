@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <title>Должники</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <div th:insert="parts/header :: head"></div>
+</head>
+<body>
+<header th:insert="parts/menu :: navbar"></header>
+
+<h3 class="text-center lh-base p-4 mt-5">Реестр должников</h3>
+
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Отчество</th>
+            <th>Дата рождения</th>
+            <th>Гражданство</th>
+            <th>Адрес</th>
+            <th>Почта</th>
+            <th>Телефон</th>
+            <th>Пол</th>
+            <th></th>
+        </tr>
+        <tr th:each="item : ${listPersons}">
+            <td th:text="${item.middleName}"></td>
+            <td th:text="${item.firstName}"></td>
+            <td th:text="${item.lastName}"></td>
+            <td th:text="${item.birthDate}"></td>
+            <td th:text="${item.citizenship}"></td>
+            <td th:text="${item.adress}"></td>
+            <td th:text="${item.email}"></td>
+            <td th:text="${item.phone}"></td>
+            <td th:text="${item.gender}"></td>
+            <td><a th:href="@{/person/{id}(id=${item.id})}">Подробнее..</a> </td>
+        </tr>
+    </table>
+</div>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<footer th:insert="parts/footer :: footer"></footer>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <title>Личный кабинет</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <div th:insert="parts/header :: head"></div>
+</head>
+<body>
+<header th:insert="parts/menu :: navbar"></header>
+
+<h3>Клиент <span th:text="${acc.appUser.firstName}"></span> <span th:text="${acc.appUser.lastName}"></span></h3>
+<h4>Телефон:</h4>
+<div>
+    <span th:text="${acc.phone}"></span>
+</div>
+<h4>Почта</h4>
+<div>
+    <span th:text="${acc.appUser.email}"></span>
+</div>
+<br><br>
+<div>
+    <h4>Документы пользователя:</h4>
+    <div class="container">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>УИ документа</th>
+                <th>Серия</th>
+                <th>Номер</th>
+                <th>Тип документа</th>
+            </tr>
+            <tr>
+                <td th:text="${document.docId}"></td>
+                <td th:text="${document.series}"></td>
+                <td th:text="${document.numeral}"></td>
+                <td th:text="${document.typeCode.name}"></td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+<div>
+    <h4>Банковская карта пользователя</h4>
+    <div class="container">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>УИ карты</th>
+                <th>Номер</th>
+                <th>Тип карты</th>
+                <th>Срок действия(месяц)</th>
+                <th>Срок действия(год)</th>
+                <th>CCV</th>
+            </tr>
+            <tr>
+                <td th:text="${acc.card.cardId}"></td>
+                <td th:text="${acc.card.number}"></td>
+                <td th:text="${acc.card.cardType}"></td>
+                <td th:text="${acc.card.expiryMonth}"></td>
+                <td th:text="${acc.card.expiryYear}"></td>
+                <td th:text="${acc.card.ccv}"></td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+<footer th:insert="parts/footer :: footer"></footer>
+</body>
+</html>

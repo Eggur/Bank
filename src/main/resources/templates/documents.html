@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Документы</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <div th:insert="parts/header :: head"></div>
+</head>
+<body>
+<header th:insert="parts/menu :: navbar"></header>
+<h3>Добавить документ</h3>
+<form action="/document/create" method="post">
+    <div class="form-group col-xs-3">
+        <label for="exampleInputEmail1">Название Документа</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="название" name="title">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail2">Серия</label>
+        <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="серия" name="series">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail3">Номер</label>
+        <input type="number" class="form-control" id="exampleInputEmail3" aria-describedby="emailHelp" placeholder="номер" name="numeral">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail4">Комментарий</label>
+        <input type="text" class="form-control" id="exampleInputEmail4" aria-describedby="emailHelp" placeholder="комментарий" name="description">
+    </div>
+    <button type="submit" class="btn btn-primary">Сохранить документ</button>
+</form>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<footer th:insert="parts/footer :: footer"></footer>
+</body>
+</html>

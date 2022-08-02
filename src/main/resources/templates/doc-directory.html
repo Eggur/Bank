@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Справочник</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <div th:insert="parts/header :: head"></div>
+</head>
+<body>
+<header th:insert="parts/menu :: navbar"></header>
+<h3 class="text-center lh-base p-4 mt-5">Справочник документов</h3>
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>№</th>
+            <th>Код</th>
+            <th>Название</th>
+            <th>Серия</th>
+            <th>Номер</th>
+            <th>Комментарий</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item, iterStat : ${directory}"
+            th:style="${iterStat.odd}? 'font-weight: bold;'">
+            <td th:text="${iterStat.index}+1"></td>
+            <td th:text="${item.docId}"></td>
+            <td th:text="${item.title}"></td>
+            <td th:text="${item.series}"></td>
+            <td th:text="${item.numeral}"></td>
+            <td th:text="${item.description}"></td>
+            <td><a th:href="@{/dict-document-type/delete{id}(id=${item.id})}">Удалить документ</a> </td>
+        </tr>
+        </tbody>
+
+    </table>
+</div>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<footer th:insert="parts/footer :: footer"></footer>
+</body>
+</html>

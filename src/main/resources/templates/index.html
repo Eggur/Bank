@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <div th:insert="parts/header :: head"></div>
+</head>
+<body>
+<header th:insert="parts/menu :: navbar"></header>
+<section class="jumbotron text-center">
+    <div class="container">
+        <p class="lead text-muted">Это выпускной проект по окончанию курса обучения от компании Egar-technology. Данный проект является открытым и если у вас возникнут вопросы или пожелания внизу страницы есть все мои контактные данные. Приятного исследования!</p>
+    </div>
+</section>
+<a th:href="@{/acc/{id}(id=${acc.id})}">Личный кабинет</a>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<footer th:insert="parts/footer :: footer"></footer>
+</body>
+</html>
