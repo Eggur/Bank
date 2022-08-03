@@ -24,7 +24,7 @@ public class DocumentController {
     @PostMapping("/document/create")
     public String createDocument(Document document) {
         documentService.saveDocument(document);
-        return "redirect:/";
+        return "redirect:/document-register";
     }
 
     @GetMapping("/document/search")

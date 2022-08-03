@@ -43,8 +43,13 @@ public class PersonController {
     public String personInfo(@PathVariable Long id, Model model){
         model.addAttribute("person", personService.getPersonById(id));
         model.addAttribute("document", documentService.getDocumentById(id));
-        model.addAttribute("card", cardService.getCardById(id));
         return "person-info";
+    }
+
+    @GetMapping("/person/delete{id}")
+    public String deletePerson(@PathVariable Long id){
+        personService.deletePerson(id);
+        return "redirect:/persons-search";
     }
 
 

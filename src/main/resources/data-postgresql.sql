@@ -8,7 +8,7 @@ INSERT INTO public.document (id,description,numeral,series,title,doc_id,type_cod
                                                                                          (7,NULL,'842','481849814','Страховой полис',7,'07');
 
 INSERT INTO public.doc_type (id,code,name) VALUES
-                                            (1,'01','Свидетельство о рождении'),
+                                            (1,'02','Паспорт гражданина РФ'),
                                             (2,'02','Паспорт гражданина РФ'),
                                             (3,'03','Вид на жительство в РФ'),
                                             (4,'04','Водительское удостоверение'),
@@ -24,10 +24,8 @@ INSERT INTO public.person (adress,birthdate,citizenship,debt_amount,email,first_
                                                                                                                                         ('улица Богданова 103, 67','2002.10.03','Россия','84281','alex2002@gmail.com','Александр','Мужчина','Владимирович','Солдатов','+79521930438','5'),
                                                                                                                                         ('улица Вишневая, 102','1973.05.09','Россия','63149','vasgur1973@gmail.com','Василий','Мужской','Васильевич','Гурин','+79273893665','6'),
                                                                                                                                         ('улица Московская, 110','1982.04.23','Россия','64174','gudkovk@mail.ru','Кирилл','Мужской','Владимирович','Гудков','+76413481264','7');
-INSERT INTO public.app_user (id,app_user_role,email,enabled,first_name,last_name,"locked","password",user_id) VALUES
-    (1,'USER','user@mail.ru',true,'Test','User',false,'$2a$10$D7ZBl48D.DQh5Qn37wBF0eapGNFf2Sduvss7k3X2TpKIWi4MKRDAS','1');
 
-INSERT INTO public.account (id,amount,phone,app_user,card) VALUES
-    (1,NULL,'+79374005191','1','1');
+INSERT INTO public.account (id,phone,app_user) VALUES
+    (1,'+79374005191','1');
 
 

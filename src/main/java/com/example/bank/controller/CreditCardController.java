@@ -22,7 +22,7 @@ public class CreditCardController {
     private final AccService accService;
 
     @GetMapping("/credit-card")
-    public String creditCard(Model model, @ModelAttribute("acc")Account account){
+    public String creditCard(Model model){
         model.addAttribute("acc", accService.findAll());
         return "cards";
     }

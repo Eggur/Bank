@@ -35,9 +35,6 @@ public class AppUser implements UserDetails {
     private String lastName;
     private String email;
     private String password;
-
-    @Column(name = "user_id")
-    private String userId;
     @Enumerated(EnumType.STRING)
     private AppUserRole appUserRole;
     private Boolean locked = false;

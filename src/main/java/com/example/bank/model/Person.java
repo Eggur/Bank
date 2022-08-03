@@ -54,12 +54,7 @@ public class Person {
     private String debtAmount;
 
     @ManyToOne
-    @JoinColumn(name = "document", referencedColumnName = "doc_id")
+    @JoinColumn(name = "document", referencedColumnName = "id")
     private Document document;
-
-    @ManyToOne
-    @JoinColumn(name = "card", referencedColumnName = "card_id")
-    private CreditCard card;
-
 
 }

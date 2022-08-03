@@ -31,10 +31,10 @@
                 <th>Тип документа</th>
             </tr>
             <tr>
-                <td th:text="${document.docId}"></td>
+                <td th:text="${document.id}"></td>
                 <td th:text="${document.series}"></td>
                 <td th:text="${document.numeral}"></td>
-                <td th:text="${document.typeCode.name}"></td>
+                <td th:text="${document.title}"></td>
             </tr>
             </tbody>
 
@@ -49,18 +49,18 @@
             <tr>
                 <th>УИ карты</th>
                 <th>Номер</th>
-                <th>Тип карты</th>
                 <th>Срок действия(месяц)</th>
                 <th>Срок действия(год)</th>
+                <th>Фамилия и имя</th>
                 <th>CCV</th>
             </tr>
             <tr>
-                <td th:text="${acc.card.cardId}"></td>
-                <td th:text="${acc.card.number}"></td>
-                <td th:text="${acc.card.cardType}"></td>
-                <td th:text="${acc.card.expiryMonth}"></td>
-                <td th:text="${acc.card.expiryYear}"></td>
-                <td th:text="${acc.card.ccv}"></td>
+                <td th:text="${card.id}"></td>
+                <td th:text="${card.number}"></td>
+                <td th:text="${card.expiryMonth}"></td>
+                <td th:text="${card.expiryYear}"></td>
+                <td th:text="${card.fullName}"></td>
+                <td th:text="${card.ccv}"></td>
             </tr>
             </tbody>
 

@@ -27,49 +27,14 @@
             <th>Тип документа</th>
         </tr>
         <tr>
-            <td th:text="${document.docId}"></td>
+            <td th:text="${document.id}"></td>
             <td th:text="${document.series}"></td>
             <td th:text="${document.numeral}"></td>
-            <td th:text="${document.typeCode.name}"></td>
+            <td th:text="${document.title}"></td>
+            <td><a th:href="@{/person/delete{id}(id=${document.id})}">Удалить должника</a> </td>
         </tr>
     </table>
 </div>
-<h3>Карты должника:</h3>
-<div class="container">
-    <table class="table table-bordered">
-        <tr>
-            <th>УИ карты</th>
-            <th>Номер</th>
-            <th>Срок действия(месяц)</th>
-            <th>Срок действия(год)</th>
-            <th>CCV</th>
-            <th>Тип карты</th>
-        </tr>
-        <tr>
-            <td th:text="${card.cardId}"></td>
-            <td th:text="${card.number}"></td>
-            <td th:text="${card.expiryMonth}"></td>
-            <td th:text="${card.expiryYear}"></td>
-            <td th:text="${card.ccv}"></td>
-            <td th:text="${card.cardType}"></td>
-        </tr>
-    </table>
-</div>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
 <footer th:insert="parts/footer :: footer"></footer>
 </body>
 </html>

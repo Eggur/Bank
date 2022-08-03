@@ -20,18 +20,20 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @Column(name = "amount")
-    private String amount;
 
     @Column(name = "phone")
     private String phone;
 
     @ManyToOne
-    @JoinColumn(name = "app_user", referencedColumnName = "user_id")
+    @JoinColumn(name = "app_user", referencedColumnName = "id")
     private AppUser appUser;
 
     @ManyToOne
-    @JoinColumn(name = "card", referencedColumnName = "card_id")
+    @JoinColumn(name = "card", referencedColumnName = "id")
     private CreditCard card;
+
+    @ManyToOne
+    @JoinColumn(name = "doc", referencedColumnName = "full_name")
+    private Document document;
 
 }

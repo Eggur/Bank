@@ -36,14 +36,4 @@ public class CreditCard implements Serializable {
     @Column(name = "ccv")
     private String ccv;
 
-    @Column(name = "type")
-    private CardType cardType;
-
-    @Column(name = "card_id")
-    private String cardId;
-
-    public enum CardType{
-        DEBIT {@Override public String toString() {return  "дебетовая";}},
-        CREDIT {@Override public String toString() {return "кредитная";}}
-    }
 }

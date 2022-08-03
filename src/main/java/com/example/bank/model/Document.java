@@ -31,8 +31,8 @@ public class Document implements Serializable {
     @Column(name = "description", columnDefinition = "text")
     private String description;
 
-    @Column(name = "doc_id")
-    private String docId;
+    @Column(name = "full_name")
+    private String fullName;
 
     @JoinColumn(name = "type_code", referencedColumnName = "code", foreignKey = @ForeignKey(name = "type_code_key"))
     @ManyToOne

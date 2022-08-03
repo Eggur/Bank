@@ -26,22 +26,16 @@
         <tr th:each="item, iterStat : ${directory}"
             th:style="${iterStat.odd}? 'font-weight: bold;'">
             <td th:text="${iterStat.index}+1"></td>
-            <td th:text="${item.docId}"></td>
+            <td th:text="${item.id}"></td>
             <td th:text="${item.title}"></td>
             <td th:text="${item.series}"></td>
             <td th:text="${item.numeral}"></td>
             <td th:text="${item.description}"></td>
-            <td><a th:href="@{/dict-document-type/delete{id}(id=${item.id})}">Удалить документ</a> </td>
         </tr>
         </tbody>
 
     </table>
 </div>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
 <footer th:insert="parts/footer :: footer"></footer>
 </body>
 </html>

@@ -22,4 +22,9 @@ public class PersonService {
     public Person getPersonById(Long id){
         return personRepo.findById(id).orElseThrow(null);
     }
+
+    public void deletePerson(Long id){
+        personRepo.deleteById(id);
+    }
+
 }
