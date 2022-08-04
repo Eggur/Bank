@@ -20,27 +20,31 @@ Thymeleaf<br>
 
 ## Использование:
 В самом начале запускаем приложение из идеи, далее в postman или insomnia проходим регистрацию вбивая имя, фамилию, почту и пароль
-![](src/main/resources/readme/registration.png)<br>
+![](src/main/resources/readme/registration.png)
 После вбиваем данные об аккаунте в базу данных по запросу:<br> INSERT INTO public.account (id,phone,app_user) VALUES
 (1,'+79374005191','1');<br>
 С его помощью добавляется номер пользователя и связь между таблицами account и app_user.<br>
 После перезапуска приложения вбиваем в поле регистрации почту аккаунта и пароль.<br>
-![](src/main/resources/readme/login.png)<br>
+![](src/main/resources/readme/login.png)
+<br>
 Перейти на главную страницу можно по ссылке по ссылке http://localhost:8080/1.
 
 ### Документы
-![](src/main/resources/readme/docs.png)<br>
+![](src/main/resources/readme/docs.png)
+<br>
 Перейдя на страницу "документы" становится доступна форма, с помощью которой можно добавить документ для своего аккаунта<br>
 После заполнения формы документ добавляется в список документов на странице "справочник"<br>
-![](src/main/resources/readme/dic-doc.png)<br>
+![](src/main/resources/readme/dic-doc.png)
 ### Карты
-![](src/main/resources/readme/card.png)<br>
+![](src/main/resources/readme/card.png)
+<br>
 На странице "карты" доступна форма для оформления дебетовой карты(в будущем планируется добавить кредитную карту). После оформления карта сохраняется на аккаунте пользователя.<br>
 На следующей странице "пополнение баланса" можно выбрать сумму пополнения и номер карты.<br>
-![](src/main/resources/readme/transaction.png)<br>
+![](src/main/resources/readme/transaction.png)
 
 ### Личный кабинет
-![](src/main/resources/readme/room.png)<br>
+![](src/main/resources/readme/room.png)
+<br>
 После всех действий становится доступным личный кабинет, ссылка на которого есть на главной странице. В нем представлена информация об пользователе, а также можно удалить существующую карту.<br>
 
 ### После ревью проект будет дополняться и изменяться, а также в будущем планируется ввести подтверждение почты с помощью maildev. Спасибо за внимание!
