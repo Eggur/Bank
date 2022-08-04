@@ -27,11 +27,6 @@ public class DocumentController {
         return "redirect:/document-register";
     }
 
-    @GetMapping("/document/search")
-    public String searchDocuments(@RequestParam(name = "title", required = false)String title, Model model){
-        model.addAttribute("documents", documentService.listSearchDocuments(title));
-        return "documents";
-    }
 
     @GetMapping("/dict-document-type")
     public String searchDirectory(Model model){

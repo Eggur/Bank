@@ -26,5 +26,9 @@ public class CreditCardService {
         cardRepository.save(creditCard);
     }
 
+    public void deleteCard(Long id){
+        cardRepository.deleteById(id);
+    }
+
 
 }

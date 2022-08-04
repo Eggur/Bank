@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <div th:insert="parts/header :: head"></div>
+</head>
+<body>
+<header th:insert="parts/menu :: navbar"></header>
+<section class="jumbotron text-center">
+    <div class="container">
+        <h4>Пополните баланс своей карты</h4>
+        <form action="/transaction/create" method="post">
+            <div class="form-group">
+                <h5>Выберите сумму пополнения</h5>
+                <label for="exampleInputEmail1">Сумма</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Сумма" name="amount">
+            </div>
+            <div class="form-group">
+                <h5>Выберите карту для пополнения баланса</h5>
+                <label for="exampleInputEmail2">Карта</label>
+                <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Номер карты" name="cardNumber">
+            </div>
+            <button type="submit" class="btn btn-primary">Пополнить</button>
+        </form>
+    </div>
+</section>
+<footer th:insert="parts/footer :: footer"></footer>
+</body>
+</html>

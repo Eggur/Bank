@@ -33,5 +33,11 @@ public class CreditCardController {
         return "redirect:/credit-card";
     }
 
+    @GetMapping("/credit-card/delete{id}")
+    public String deleteCard(@PathVariable Long id){
+        cardService.deleteCard(id);
+        return "redirect:/credit-card";
+    }
+
 
 }

@@ -53,6 +53,8 @@
                 <th>Срок действия(год)</th>
                 <th>Фамилия и имя</th>
                 <th>CCV</th>
+                <th>Баланс</th>
+                <th></th>
             </tr>
             <tr>
                 <td th:text="${card.id}"></td>
@@ -61,6 +63,8 @@
                 <td th:text="${card.expiryYear}"></td>
                 <td th:text="${card.fullName}"></td>
                 <td th:text="${card.ccv}"></td>
+                <td th:text="${transaction.amount}"></td>
+                <td><a th:href="@{/credit-card/delete{id}(id=${card.id})}">Удалить карту</a></td>
             </tr>
             </tbody>
 

@@ -34,10 +34,6 @@ public class Document implements Serializable {
     @Column(name = "full_name")
     private String fullName;
 
-    @JoinColumn(name = "type_code", referencedColumnName = "code", foreignKey = @ForeignKey(name = "type_code_key"))
-    @ManyToOne
-    private PersonDocType typeCode;
-
 
     public Document(String title, String series, String numeral) {
         this.title = title;

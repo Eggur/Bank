@@ -18,6 +18,7 @@ public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id", unique = false)
     private Long id;
 
 
@@ -35,5 +36,9 @@ public class Account {
     @ManyToOne
     @JoinColumn(name = "doc", referencedColumnName = "full_name")
     private Document document;
+
+    @ManyToOne
+    @JoinColumn(name = "replenishment", referencedColumnName = "card_number")
+    private Transaction replenishment;
 
 }
