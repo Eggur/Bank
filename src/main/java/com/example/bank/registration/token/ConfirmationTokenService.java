@@ -19,9 +19,4 @@ public class ConfirmationTokenService {
     public Optional<ConfirmationToken> getToken(String token) {
         return confirmationTokenRepository.findByToken(token);
     }
-
-    public int setConfirmedAt(String token) {
-        return confirmationTokenRepository.updateConfirmedAt(
-                token, LocalDateTime.now());
-    }
 }

@@ -29,15 +29,15 @@ public class Account {
     @JoinColumn(name = "app_user", referencedColumnName = "id")
     private AppUser appUser;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "card", referencedColumnName = "id")
     private CreditCard card;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "doc", referencedColumnName = "full_name")
     private Document document;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "replenishment", referencedColumnName = "card_number")
     private Transaction replenishment;
 

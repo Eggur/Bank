@@ -4,7 +4,6 @@ import com.example.bank.appuser.AppUser;
 import com.example.bank.appuser.AppUserRepository;
 import com.example.bank.appuser.AppUserRole;
 import com.example.bank.appuser.AppUserService;
-import com.example.bank.email.EmailSender;
 import com.example.bank.registration.token.ConfirmationToken;
 import com.example.bank.registration.token.ConfirmationTokenService;
 import lombok.AllArgsConstructor;
@@ -52,10 +51,7 @@ public class RegistrationService {
         if (expiredAt.isBefore(LocalDateTime.now())) {
             throw new IllegalStateException("token expired");
         }
-
-        confirmationTokenService.setConfirmedAt(token);
-        appUserService.enableAppUser(
-                confirmationToken.getAppUser().getEmail());
+        appUserService.enableAppUser(confirmationToken.getAppUser());
         return "confirmed";
     }
 
